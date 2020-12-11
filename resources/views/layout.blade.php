@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
     <title>@yield('titulo')</title>
+
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+
+    </style>
+
+    @yield('estilos')
 </head>
 <body>
 
@@ -31,7 +54,7 @@
                     <div type="button" class="btn btn-danger" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 50%; width: 40px; height: 40px">
                     </div>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start">
-                        <li><a class="dropdown-item" href="#">Meu Perfil</a></li>
+                        <li><a class="dropdown-item" href="/perfil">Meu Perfil</a></li>
                         <li><a class="dropdown-item" href="#">Enviar Video</a></li>
                         <li><a class="dropdown-item" href="#">Sair</a></li>
                     </ul>

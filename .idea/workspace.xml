@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d420c235-243c-4457-a359-5d7c1fa80f3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PesquisaController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/LimitadorDeCaracteres.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/lobby/tela-resultados-pesquisa.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PerfilUsuarioController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/perfil/tela-perfil.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lobby/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lobby/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,6 +183,7 @@
       <workItem from="1607452829721" duration="705000" />
       <workItem from="1607453578883" duration="8344000" />
       <workItem from="1607688040131" duration="9075000" />
+      <workItem from="1607711556139" duration="3428000" />
     </task>
     <servers />
   </component>
