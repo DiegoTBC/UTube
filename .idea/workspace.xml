@@ -2,22 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d420c235-243c-4457-a359-5d7c1fa80f3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/lobby/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/login-cadastro/formulario-login-cadastro.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/valida-formulario.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/fim.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/inicio.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/login/formulario-login-cadastro.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/valida-formulario.php" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PesquisaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/LimitadorDeCaracteres.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/lobby/tela-resultados-pesquisa.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lobby/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lobby/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -142,11 +140,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1lO0SP4cSazcXnuUXYWYC2tO0zH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -182,6 +184,7 @@
       <updated>1607452828490</updated>
       <workItem from="1607452829721" duration="705000" />
       <workItem from="1607453578883" duration="8344000" />
+      <workItem from="1607688040131" duration="9075000" />
     </task>
     <servers />
   </component>
@@ -199,5 +202,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
