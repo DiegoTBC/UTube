@@ -24,7 +24,6 @@
             background: #555;
         }
 
-
     </style>
 
     @yield('estilos')
@@ -34,8 +33,10 @@
     @if(\Illuminate\Support\Facades\Route::current()->uri() !== 'entrar' && \Illuminate\Support\Facades\Route::current()->uri() !== 'cadastrar')
     <nav class="navbar navbar-light bg-light d-flex justify-content-between align-items-center shadow-sm" >
         <div class="container">
+
             <a class="navbar-brand" href="/">UTube</a>
-            <form class="d-flex" method="GET" action="/resultados">
+
+            <form class="d-flex" method="GET" action="/resultados" name="formulario" onsubmit="return validaFormularioPesquisa()">
                 <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar" name="pesquisa" id="pesquisa">
                 <button class="btn btn-outline-dark" type="submit">
                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -44,6 +45,7 @@
                     </svg>
                 </button>
             </form>
+
             <div>
                 @guest
                     <a href="/entrar" class="btn btn-outline-danger">Entrar</a>
@@ -60,7 +62,6 @@
                     </ul>
                 </div>
                 @endauth
-
             </div>
 
         </div>
@@ -69,6 +70,15 @@
     <div class="container">
         @yield('conteudo')
     </div>
+
+    <script>
+        function validaFormularioPesquisa() {
+            var x = document.forms["formulario"]["pesquisa"].value;
+            if (x == "") {
+                return false;
+            }
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script></body>
