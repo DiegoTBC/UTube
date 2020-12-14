@@ -1,9 +1,5 @@
 <?php
 
-use App\Http\Controllers\EntrarController;
-use App\Http\Controllers\PerfilUsuarioController;
-use App\Http\Controllers\PesquisaController;
-use App\Http\Controllers\RegistroController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'lobby.home');
+Route::get('/', function () {
+    return view('lobby.home');
+});
 
-Route::get('/entrar', [EntrarController::class, 'index']);
-Route::get('/cadastrar', [RegistroController::class, 'index']);
-Route::get('/resultados', [PesquisaController::class, 'index']);
-Route::get('/perfil', [PerfilUsuarioController::class, 'index']);
-Route::get('/assistir');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+Route::get('/assistir', [\App\Http\Controllers\AssistirVideoController::class, 'index']);
+Route::get('/perfil', [\App\Http\Controllers\PerfilUsuarioController::class, 'index']);
+Route::get('/entrar', [\App\Http\Controllers\EntrarController::class, 'index']);
+Route::get('/cadastrar', [\App\Http\Controllers\RegistroController::class, 'index']);
+Route::get('/enviar-video', [\App\Http\Controllers\EnviarVideoController::class, 'index']);
+
+require __DIR__.'/auth.php';
