@@ -2,7 +2,11 @@
 
 
 @section('titulo')
+    @if (\Illuminate\Support\Facades\Route::current()->uri() === 'entrar')
     Entrar
+    @else
+    Cadastrar
+    @endif
 @endsection
 
 @section('conteudo')
@@ -10,12 +14,21 @@
 
 <div class="container d-flex justify-content-center" style="height: 100vh; width: 100vh">
     <div class="align-self-center" style="width: 50vh; height: 50vh">
-        <form action="/entrar" class="needs-validation" method="POST" novalidate style="width: 100%;">
+        <form action="@php echo \Illuminate\Support\Facades\Route::current()->uri() === 'entrar' ? '/entrar' : '/cadastrar' @endphp"
+              class="needs-validation" method="POST" novalidate style="width: 100%;">
+
             @csrf
+
+            @if(session('erro'))
+            <div class="alert alert-warning" role="alert">
+                {{session('erro')}}
+            </div>
+            @endif
+
             @if (\Illuminate\Support\Facades\Route::current()->uri() === 'cadastrar' && !\Illuminate\Support\Facades\Auth::check())
             <div class="input-group mb-3">
-                <input type="nome" class="form-control shadow-sm w-45" id="text" name="nome" placeholder="Nome" required style="border-width: 0px 0px 1px 0px; border-radius: 0px; margin-right: 10px">
-                <input type="sobrenome" class="form-control shadow-sm w-45" id="text" name="sobrenome" placeholder="Sobrenome" required style="border-width: 0px 0px 1px 0px; border-radius: 0px;">
+                <input type="text" class="form-control shadow-sm w-45" id="name" name="name" placeholder="Nome" required style="border-width: 0px 0px 1px 0px; border-radius: 0px; margin-right: 10px">
+                <input type="text" class="form-control shadow-sm w-45" id="lastname" name="lastname" placeholder="Sobrenome" required style="border-width: 0px 0px 1px 0px; border-radius: 0px;">
             </div>
             @endif
             <div class="mb-3">
@@ -29,8 +42,11 @@
                 <input type="password" class="form-control shadow-sm" id="password2" name="password2" placeholder="Repita a senha" required style="border-width: 0px 0px 1px 0px; border-radius: 0px">
             </div>
             @endif
+            <div class="alert alert-danger" role="alert" style="display: none">
+                Senhas divergentes !
+            </div>
             <div class="col-12 text-center">
-                <button class="btn btn-outline-light shadow text-success" type="submit" >{{$textoBotao}}</button>
+                <button class="btn btn-outline-light shadow text-success" type="submit" id="botaoCadastrar" onclick="return confereSenhasIguais()">{{$textoBotao}}</button>
                 @if (\Illuminate\Support\Facades\Route::current()->uri() === 'cadastrar' && !\Illuminate\Support\Facades\Auth::check())
                 <a href="/entrar" class="btn btn-outline-light shadow text-danger" type="submit" style="margin-left: 15px;">Cancelar</a>
                 @endif
@@ -48,5 +64,24 @@
 
 
     @include('valida-formulario')
+
+    @if(\Illuminate\Support\Facades\Route::current()->uri() === 'cadastrar')
+
+        <script>
+
+            function confereSenhasIguais() {
+                var pw = document.querySelector('#password')
+                var pw2 = document.querySelector('#password2')
+
+                if (pw.value !== pw2.value) {
+                    document.querySelector('.alert').style.display = 'block';
+                    return false
+                }
+            }
+
+        </script>
+
+    @endif
+
 @endsection
 

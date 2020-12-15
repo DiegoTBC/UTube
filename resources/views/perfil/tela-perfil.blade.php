@@ -79,7 +79,7 @@
         <div class="col col-md-3">
             <div class="card">
                 <img src="https://blog.futfanatics.com.br/wp-content/uploads/2019/09/Capa-Blog.jpg" alt="John" style="width:100%">
-                <h1>Diego Torres</h1>
+                <h1>{{$nomeUsuario}} </h1>
                 <p class="title">Usuario</p>
                 <p>Pirapozinho SP</p>
 

@@ -57,11 +57,13 @@
                     </div>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start">
                         <li><a class="dropdown-item" href="/perfil">Meu Perfil</a></li>
-                        <li><a class="dropdown-item" href="#">Enviar Video</a></li>
-                        <li><a class="dropdown-item" href="#">Sair</a></li>
+                        <li><a class="dropdown-item" href="/enviar-video">Enviar Video</a></li>
+                        <li><a class="dropdown-item" href="/sair">Sair</a></li>
+
                     </ul>
                 </div>
                 @endauth
+
             </div>
 
         </div>
