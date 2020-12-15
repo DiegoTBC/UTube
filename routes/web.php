@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('lobby.home');
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'create']);
 
 Route::get('/resultados', [\App\Http\Controllers\PesquisaController::class, 'index']);
 
@@ -29,7 +27,10 @@ Route::post('/cadastrar', [\App\Http\Controllers\RegistroController::class, 'sto
 Route::get('/assistir', [\App\Http\Controllers\AssistirVideoController::class, 'index']);
 Route::get('/perfil', [\App\Http\Controllers\PerfilUsuarioController::class, 'index'])->middleware('auth');
 
-Route::get('/enviar-video', [\App\Http\Controllers\EnviarVideoController::class, 'index'])->middleware('auth');
+Route::get('/enviar-video', [\App\Http\Controllers\VideoController::class, 'index'])->middleware('auth');
+Route::post('/enviar-video', [\App\Http\Controllers\VideoController::class, 'store'])->middleware('auth');
+Route::delete('/video/{id}', [\App\Http\Controllers\VideoController::class, 'destroy'])->middleware('auth');
+
 
 
 //require __DIR__.'/auth.php';

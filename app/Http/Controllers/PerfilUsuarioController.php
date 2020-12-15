@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class PerfilUsuarioController extends Controller
@@ -14,6 +12,8 @@ class PerfilUsuarioController extends Controller
         $nomeUsuario = Auth::user()->name;
         $nomeUsuario .= " " . Auth::user()->lastname;
 
-        return view('perfil.tela-perfil', compact('nomeUsuario'));
+        $videos = Auth::user()->videos()->get();
+
+        return view('perfil.tela-perfil', compact('nomeUsuario', 'videos'));
     }
 }

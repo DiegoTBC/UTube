@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 
 class User extends Authenticatable
 {
@@ -19,6 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'lastname',
+        'foto_perfil',
         'email',
         'password'
     ];
@@ -41,4 +43,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getFotoPerfil()
+    {
+        if ($this->foto_perfil)
+        {
+            return Storage::url($this->foto_perfil);
+        }
+
+        return Storage::url('perfil/sem-imagem.jpg');
+    }
+
+    public function videos()
+    {
+        return $this->hasMany(Video::class);
+    }
 }

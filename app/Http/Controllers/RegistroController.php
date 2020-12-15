@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class RegistroController extends Controller
 {
@@ -34,12 +35,21 @@ class RegistroController extends Controller
             'password2' => 'required|string|confirmed|min:6'
         ]);*/
 
+        $foto = null;
+
+        if ($request->hasFile('foto_perfil'))
+        {
+            $foto = $request->file('foto_perfil')->store('perfil');
+        }
+
         $usuario = User::create([
-            'name' => $request->name,
-            'lastname' => $request->lastname,
+            'name' => ucfirst($request->name),
+            'lastname' => ucfirst($request->lastname),
+            'foto_perfil' => $foto,
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
+
 
         Auth::login($usuario);
 

@@ -78,7 +78,7 @@
 
         <div class="col col-md-3">
             <div class="card">
-                <img src="https://blog.futfanatics.com.br/wp-content/uploads/2019/09/Capa-Blog.jpg" alt="John" style="width:100%">
+                <img src="{{\Illuminate\Support\Facades\Auth::user()->getFotoPerfil()}}" alt="{{$nomeUsuario}}" style="width:100%">
                 <h1>{{$nomeUsuario}} </h1>
                 <p class="title">Usuario</p>
                 <p>Pirapozinho SP</p>
@@ -104,21 +104,37 @@
 
                 <ul class="list-group list-group-flush">
 
+                    @foreach($videos as $video)
+
+
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <div>
-                            <a href=""><img src="https://blog.futfanatics.com.br/wp-content/uploads/2019/09/Capa-Blog.jpg" alt="" class="img-thumbnail" height="100px" width="100px"></a>
-                            <a href=""><span id="">Titulo do Video</span></a>
+                            <a href="/assistir?v={{$video->id}}"><img src="{{$video->getCapa()}}" alt="" class="img-thumbnail" height="100px" width="100px"></a>
+                            <a href="/assistir?v={{$video->id}}"><span id="nome-video-id">{{$video->nome}}</span></a>
                         </div>
+
+                        <div class="input-group w-50" hidden id="input-nome-video-id">
+                            <input type="text" class="form-control" value="">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" onclick="editarVideo()">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                    </svg>
+                                </button>
+                                @csrf
+                            </div>
+                        </div>
+
 
                         <span class="d-flex">
                         @auth
-                             <button class="btn btn-info btn-sm mr-2">
+                             <button class="btn btn-info btn-sm mr-2" onclick="toggleInput()">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                   <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                   <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                                 </svg>
                              </button>
-                             <form action="" method="post" onsubmit="return confirm('Tem certeza?')">
+                             <form action="/video/{{$video->id}}" method="post" onsubmit="return confirm('Tem certeza?')">
                              @csrf
                              @method('DELETE')
                                 <button class="btn btn-danger btn-sm">
@@ -130,11 +146,46 @@
                         @endauth
                         </span>
                     </li>
+
+                    @endforeach
                 </ul>
             </div>
         </div>
 
     </div>
 
+    <script>
+        function toggleInput(videoId) {
+            const nomeVideoEl = document.getElementById(`nome-video-${videoId}`);
+            const inputVideoEl = document.getElementById(`input-nome-video-${videoId}`);
+            if (nomeVideoEl.hasAttribute('hidden')) {
+                nomeVideoEl.removeAttribute('hidden');
+                inputVideoEl.hidden = true;
+            } else {
+                inputVideoEl.removeAttribute('hidden');
+                nomeVideoEl.hidden = true;
+            }
+        }
+        function editarVideo(videoId) {
+            let formData = new FormData();
+            const nome = document
+                .querySelector(`#input-nome-video-${serieId} > input`)
+                .value;
+            const token = document
+                .querySelector(`input[name="_token"]`)
+                .value;
+            formData.append('nome', nome);
+            formData.append('_token', token);
+
+            const url = `/video/${videoId}/editaNome`;
+            fetch(url, {
+                method: 'POST',
+                body: formData
+            }).then(() => {
+                toggleInput(serieId);
+                document.getElementById(`nome-video-${videoId}`).textContent = nome;
+            });
+        }
+    </script>
 
 @endsection

@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d420c235-243c-4457-a359-5d7c1fa80f3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/RemovedorDeVideo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EntrarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SessaoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AssistirVideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AssistirVideoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EnviarVideoController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PerfilUsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PerfilUsuarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PesquisaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PesquisaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RegistroController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RegistroController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Video.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Video.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_14_140655_create_videos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_14_140655_create_videos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lobby/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lobby/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lobby/tela-resultados-pesquisa.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lobby/tela-resultados-pesquisa.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/login-cadastro/formulario-login-cadastro.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login-cadastro/formulario-login-cadastro.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/perfil/tela-perfil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/perfil/tela-perfil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/video/tela-assistir.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/video/tela-assistir.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/video/tela-enviar-video.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/video/tela-enviar-video.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +168,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/public/videos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/public/perfil" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -170,9 +180,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\torre\Documents\GitHub\UTube\storage\app\public\perfil" />
       <recent name="C:\Users\torre\Documents\GitHub\UTube\storage\app\public\videos" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\torre\Documents\GitHub\UTube\storage\app\public\capa" />
       <recent name="C:\Users\torre\Documents\GitHub\UTube\resources\views" />
       <recent name="C:\Users\torre\Documents\GitHub\UTube\resources\views\login-cadastro" />
     </key>
@@ -199,6 +211,7 @@
       <workItem from="1607772651174" duration="3727000" />
       <workItem from="1607946385646" duration="10413000" />
       <workItem from="1608033212964" duration="10114000" />
+      <workItem from="1608053437290" duration="10650000" />
     </task>
     <servers />
   </component>
