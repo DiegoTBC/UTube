@@ -5,8 +5,6 @@
 ##### Plataforma para envio de videos aberto ao público (similar ao YouTube).
 ##### :star: Desenvolvido para praticar a persistência de arquivos no framework Laravel. :star:
 
-Essa plataforma foi desenvolvida com foco na prática do meu conhecimento em back-end
-
 ### Funcionalidades :checkered_flag:
 
 :trophy: Autenticação e cadastro de usuários com foto de perfil
