@@ -25,10 +25,10 @@
 
 ### Prints :books:
 
-| <img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/home.png" width=500 > <br> <sub> Tela Principal </sub> |
-<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/assistir-video.png" width=300 > <br> <sub> Asssitir Video </sub> |
-<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/perfil.png" width=300 > <br> <sub> Perfil do Usuário </sub> |
-<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/enviar-video.png" width=300 > <br> <sub> Enviar Video </sub> |
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/home.png" width=700 >
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/assistir-video.png" width=700 >
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/perfil.png" width=700 >
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/enviar-video.png" width=700 >
 
 ### Linguagens, frameworks, dependências e bibliotecas utilizadas :books:
 
