@@ -2,7 +2,7 @@
 
 > Status do Projeto: Concluido :heavy_check_mark:
 
-##### Plataforma para envio de videos aberto ao público (similar ao YouTube).
+##### Plataforma de envio de videos (similar ao YouTube).
 ##### :star: Desenvolvido para praticar a persistência de arquivos no framework Laravel. :star:
 
 ### Funcionalidades :checkered_flag:
@@ -23,12 +23,12 @@
 
 :trophy: Editar nome do video
 
-### Prints :books:
+### Prints :desktop_computer:
 
-<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/home.png" width=700 >
-<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/assistir-video.png" width=700 >
-<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/perfil.png" width=700 >
-<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/enviar-video.png" width=700 >
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/home.png" width=800 >
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/assistir-video.png" width=800 >
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/perfil.png" width=800 >
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/enviar-video.png" width=800 >
 
 ### Linguagens, frameworks, dependências e bibliotecas utilizadas :books:
 
@@ -41,7 +41,7 @@ Framework:
 Biblioteca de Layout:
 - [Bootstrap](https://v5.getbootstrap.com/): versão 5.0.0
 
-### Contato:
+### Contato
 |Nome|Email|
 | -------- | -------- |
-|Diego Torres|torressdiiego@outlook.com|
+|[Diego Torres](https://www.linkedin.com/in/diegotbc/)|torressdiiego@outlook.com|
