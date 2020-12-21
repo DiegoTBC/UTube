@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d420c235-243c-4457-a359-5d7c1fa80f3c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AssistirVideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AssistirVideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PerfilUsuarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PerfilUsuarioController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PesquisaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PesquisaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RegistroController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RegistroController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lobby/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lobby/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lobby/tela-resultados-pesquisa.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lobby/tela-resultados-pesquisa.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login-cadastro/formulario-login-cadastro.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login-cadastro/formulario-login-cadastro.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/perfil/tela-perfil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/perfil/tela-perfil.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/video/tela-enviar-video.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/video/tela-enviar-video.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="d420c235-243c-4457-a359-5d7c1fa80f3c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,7 +194,7 @@
       <workItem from="1608053437290" duration="10650000" />
       <workItem from="1608081321552" duration="446000" />
       <workItem from="1608119770468" duration="8647000" />
-      <workItem from="1608552326404" duration="4147000" />
+      <workItem from="1608552326404" duration="4448000" />
     </task>
     <servers />
   </component>
