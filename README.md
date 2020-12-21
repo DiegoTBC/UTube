@@ -24,8 +24,7 @@
 :trophy: Editar nome do video
 
 
-[<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=" width=115 > <br> <sub> Diana Regina </sub>](https://github.com/Diana-ops) |
-
+[<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/home.png" width=300 > <br> <sub> Tela Principal </sub>]
 
 ### Linguagens, frameworks, dependências e bibliotecas utilizadas :books:
 
