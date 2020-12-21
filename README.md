@@ -23,8 +23,12 @@
 
 :trophy: Editar nome do video
 
+### Prints :books:
 
-[<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/home.png" width=300 > <br> <sub> Tela Principal </sub>]
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/home.png" width=300 > <br> <sub> Tela Principal </sub>
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/assistir-video.png" width=300 > <br> <sub> Tela Principal </sub>
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/perfil.png" width=300 > <br> <sub> Tela Principal </sub>
+<img src="https://github.com/DiegoTBC/UTube/blob/main/resources/prints/enviar-video.png" width=300 > <br> <sub> Tela Principal </sub>
 
 ### Linguagens, frameworks, dependências e bibliotecas utilizadas :books:
 
