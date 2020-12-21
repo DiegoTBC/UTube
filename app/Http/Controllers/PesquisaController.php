@@ -11,7 +11,7 @@ class PesquisaController extends Controller
 {
     public function index(Request $request)
     {
-        $pesquisa = $request->pesquisa;
+        $pesquisa = filter_var($request->pesquisa, FILTER_SANITIZE_STRING);
         $videos = Video::query()->where('nome', 'LIKE', '' . $pesquisa . '%')
             ->orWhere('nome', 'LIKE', '%' . $pesquisa . '%')
             ->orWhere('nome', 'LIKE', '%' . $pesquisa . '')->get();
@@ -20,8 +20,6 @@ class PesquisaController extends Controller
         //$descricaoVideo = LimitadorDeCaracteres::limitaCaracteres('Descrição ta grande pra caramba uai oras bolas fdsfsdfsd fsdfsdfsd fsdfsdfds', 70);
         //$nomeAutor = LimitadorDeCaracteres::limitaCaracteres('Diego Torres',  20);
 
-        $textoPesquisado = $request->pesquisa;
-
-        return view('lobby.tela-resultados-pesquisa', compact('textoPesquisado', 'videos'));
+        return view('lobby.tela-resultados-pesquisa', compact('pesquisa', 'videos'));
     }
 }

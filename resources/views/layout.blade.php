@@ -24,6 +24,14 @@
             background: #555;
         }
 
+
+        /* Avatar image */
+        img.avatar {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+
     </style>
 
     @yield('estilos')
@@ -53,13 +61,11 @@
 
                 @auth
                 <div class="btn-group">
-                    <div type="button" class="btn btn-danger" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 50%; width: 40px; height: 40px">
-                    </div>
+                    <img src="{{\Illuminate\Support\Facades\Auth::user()->getFotoPerfil()}}" alt="foto-perfil" class="avatar" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 50%; width: 40px; height: 40px; cursor: pointer">
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-xl-start">
                         <li><a class="dropdown-item" href="/perfil">Meu Perfil</a></li>
                         <li><a class="dropdown-item" href="/enviar-video">Enviar Video</a></li>
                         <li><a class="dropdown-item" href="/sair">Sair</a></li>
-
                     </ul>
                 </div>
                 @endauth

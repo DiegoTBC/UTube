@@ -17,6 +17,7 @@ class VideoController extends Controller
 
     public function store(Request $request)
     {
+
         $usuario = Auth::user();
 
         $capa = null;
@@ -33,8 +34,8 @@ class VideoController extends Controller
 
         DB::transaction(function () use($capa, $video, $request, $usuario) {
             $usuario->videos()->create([
-                'nome' => ucfirst($request->nomeVideo),
-                'descricao' => ucfirst($request->descricaoVideo),
+                'nome' => filter_var(ucfirst($request->nomeVideo), FILTER_SANITIZE_STRING),
+                'descricao' => filter_var(ucfirst($request->descricaoVideo), FILTER_SANITIZE_STRING),
                 'capa' => $capa,
                 'video' => $video
             ]);
@@ -47,5 +48,14 @@ class VideoController extends Controller
     {
         $removedorDeVideo->removerVideo($request->id);
         return redirect('/perfil');
+    }
+
+    public function editaNome(int $id, Request $request)
+    {
+        $novoNome = $request->nome;
+        $video = Video::find($id);
+        $video->nome = $novoNome;
+        $video->save();
+
     }
 }

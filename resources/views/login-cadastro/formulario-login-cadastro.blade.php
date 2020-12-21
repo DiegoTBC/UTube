@@ -42,7 +42,7 @@
                 <input type="password" class="form-control shadow-sm" id="password2" name="password2" placeholder="Repita a senha" required style="border-width: 0px 0px 1px 0px; border-radius: 0px">
             </div>
              <div class="mb-3">
-                <input type="file" class="form-control shadow-sm" id="foto_perfil" name="foto_perfil" placeholder="Foto de Perfil" required style="border-width: 0px 0px 1px 0px; border-radius: 0px" accept=".png, .jpg, .jpeg">
+                <input type="file" class="form-control shadow-sm" id="foto_perfil" name="foto_perfil" placeholder="Foto de Perfil" style="border-width: 0px 0px 1px 0px; border-radius: 0px" accept=".png, .jpg, .jpeg">
              </div>
             @endif
             <div class="alert alert-danger" role="alert" style="display: none">

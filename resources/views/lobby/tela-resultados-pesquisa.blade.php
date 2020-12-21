@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('titulo')
-    {{$textoPesquisado}} - UTube
+    {{$pesquisa}} - UTube
 @endsection
 
 @section('conteudo')
@@ -18,7 +18,7 @@
                     <p class="card-text">{{$video->descricao}}</p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Enviado por: {{$video->id}}</small>
+                    <small class="text-muted">Enviado por: {{$video->user->name}} {{$video->user->lastname}}</small>
                 </div>
             </div>
         </div>

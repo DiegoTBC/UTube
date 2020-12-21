@@ -34,6 +34,7 @@
             <input class="form-control shadow-sm" type="file" id="arquivo-imagem" name="arquivo-imagem" accept=".png, .jpg, .jpeg" >
         </div>
         <div class="grupo-input mb-3">
+            <input type="hidden" name="MAX_FILE_SIZE" value="100000000000" />
             <label for="arquivo-video" class="form-label">Video</label>
             <input class="form-control shadow-sm" type="file" id="arquivo-video" name="arquivo-video" accept=".mp4" required>
         </div>

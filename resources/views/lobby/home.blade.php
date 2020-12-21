@@ -15,11 +15,11 @@
             <div class="card h-51 shadow" style="text-align: justify">
                 <a href="/assistir?v={{$video->id}}"><img src="{{$video->getCapa()}}" class="card-img-top" alt="..." width="320px" height="180px"></a>
                 <div class="card-body border-dark">
-                    <a href="" style="text-decoration: none; color: black"><h5 class="card-title">{{$video->nome}}</h5></a>
+                    <a href="/assistir?v={{$video->id}}" style="text-decoration: none; color: black"><h5 class="card-title">{{$video->nome}}</h5></a>
                     <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Enviado por: {{$video->user_id}}</small>
+                    <small class="text-muted">Enviado por: {{$video->user->name}} {{$video->user->lastname}}</small>
                 </div>
             </div>
         </div>

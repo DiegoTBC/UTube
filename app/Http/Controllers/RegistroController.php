@@ -23,7 +23,11 @@ class RegistroController extends Controller
 
     public function store(Request $request)
     {
-        if ($request->password !== $request->password2) {
+        $senha = filter_var($request->password, FILTER_SANITIZE_STRING);
+        $senha2 = filter_var($request->password2, FILTER_SANITIZE_STRING);
+
+
+        if ($senha !== $senha2) {
             return redirect('/cadastrar')->with('erro', 'Senhas divergentes');
         }
 
@@ -43,17 +47,14 @@ class RegistroController extends Controller
         }
 
         $usuario = User::create([
-            'name' => ucfirst($request->name),
-            'lastname' => ucfirst($request->lastname),
+            'name' => ucfirst(filter_var($request->name, FILTER_SANITIZE_STRING)),
+            'lastname' => ucfirst(filter_var($request->lastname, FILTER_SANITIZE_STRING)),
             'foto_perfil' => $foto,
-            'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'email' => filter_var($request->email, FILTER_SANITIZE_EMAIL),
+            'password' => Hash::make($senha)
         ]);
 
-
         Auth::login($usuario);
-
-        //event(new Registered($usuario));
 
         return redirect('/');
     }

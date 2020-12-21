@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class PerfilUsuarioController extends Controller
@@ -15,5 +17,15 @@ class PerfilUsuarioController extends Controller
         $videos = Auth::user()->videos()->get();
 
         return view('perfil.tela-perfil', compact('nomeUsuario', 'videos'));
+    }
+
+    public function editaNome(int $id, Request $request)
+    {
+        $usuario = User::find($id);
+        $nome = $request->name;
+        $sobrenome = $request->lastname;
+        $usuario->name = ucfirst($nome);
+        $usuario->lastname = ucfirst($sobrenome);
+        $usuario->save();
     }
 }

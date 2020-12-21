@@ -12,11 +12,7 @@ class HomeController extends Controller
 {
     public function create()
     {
-        $videos = Video::all();
-
-        /*$videos = DB::table('users')
-            ->join('videos', 'users.id', '=', 'videos.user_id')
-            ->select('users.name', 'users.lastname', 'videos.*');*/
+        $videos = Video::all()->take(8);
 
         return view('lobby.home', compact('videos'));
     }

@@ -26,10 +26,12 @@ Route::post('/cadastrar', [\App\Http\Controllers\RegistroController::class, 'sto
 
 Route::get('/assistir', [\App\Http\Controllers\AssistirVideoController::class, 'index']);
 Route::get('/perfil', [\App\Http\Controllers\PerfilUsuarioController::class, 'index'])->middleware('auth');
+Route::post('/perfil/{id}/editaNome', [\App\Http\Controllers\PerfilUsuarioController::class, 'editaNome'])->middleware('auth');
 
 Route::get('/enviar-video', [\App\Http\Controllers\VideoController::class, 'index'])->middleware('auth');
 Route::post('/enviar-video', [\App\Http\Controllers\VideoController::class, 'store'])->middleware('auth');
 Route::delete('/video/{id}', [\App\Http\Controllers\VideoController::class, 'destroy'])->middleware('auth');
+Route::post('/video/{id}/editaNome', [\App\Http\Controllers\VideoController::class, 'editaNome'])->middleware('auth');
 
 
 

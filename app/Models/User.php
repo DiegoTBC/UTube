@@ -51,7 +51,7 @@ class User extends Authenticatable
             return Storage::url($this->foto_perfil);
         }
 
-        return Storage::url('perfil/sem-imagem.jpg');
+        return Storage::url('perfil/sem-foto.png');
     }
 
     public function videos()
